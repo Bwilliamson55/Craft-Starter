@@ -28,3 +28,4 @@ npm-error.log
 !.vscode/extensions.json
 config.codekit3
 prepros-6.config
+/web/dist/
