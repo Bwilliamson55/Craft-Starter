@@ -1,13 +1,49 @@
-dateModified: 1663431412
+dateModified: 1663439635
 email:
   fromEmail: benjaminawilliamson@gmail.com
   fromName: pairadice
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: assets
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: $S3_BUCKET
+      bucketSelectionMode: manual
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: $CLOUDFRONT_PATH_PREFIX
+      expires: '3 months'
+      keyId: $S3_KEY_ID
+      makeUploadsPublic: false
+      region: $S3_REGION
+      secret: $S3_SECRET
+      storageClass: ''
+      subfolder: assets
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_URL
 meta:
   __names__:
-    361f16aa-ce68-40f3-9e47-8ebefb09c994: pairadice
-    5570d265-1c68-493e-9d8d-b625a29ddfed: pairadice
-    efd9e91f-0f6c-4839-8a1b-1db4ba59844b: Common
+    8fce083b-c9ec-4cd1-b89c-06c57d13cba9: Home # Home
+    361f16aa-ce68-40f3-9e47-8ebefb09c994: pairadice # pairadice
+    5570d265-1c68-493e-9d8d-b625a29ddfed: pairadice # pairadice
+    befa93f6-685f-44a1-b117-119d2ec11296: Home # Home
+    efd9e91f-0f6c-4839-8a1b-1db4ba59844b: Common # Common
+    f7d05a07-5de1-44f5-a6bb-4b893f25be88: assets # assets
+plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  copy:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

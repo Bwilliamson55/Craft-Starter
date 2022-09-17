@@ -1,6 +1,9 @@
 {
   "require": {
+    "craftcms/aws-s3": "^2.0",
     "craftcms/cms": "^4.2.0.2",
+    "nystudio107/craft-plugin-vite": "^4.0",
+    "nystudio107/craft-vite": "4.0.3",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -14,13 +17,11 @@
   "config": {
     "allow-plugins": {
       "craftcms/plugin-installer": true,
-      "yiisoft/yii2-composer": true
+      "yiisoft/yii2-composer": true,
+      "fortrabbit/craft-auto-migrate": true
     },
     "sort-packages": true,
-    "optimize-autoloader": true,
-    "platform": {
-      "php": "8.0.2"
-    }
+    "optimize-autoloader": true
   },
   "scripts": {
     "post-root-package-install": [
