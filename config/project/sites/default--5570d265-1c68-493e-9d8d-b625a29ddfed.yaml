@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: pairadice
+primary: true
+siteGroup: 361f16aa-ce68-40f3-9e47-8ebefb09c994
+sortOrder: 1

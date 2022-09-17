@@ -1,0 +1,22 @@
+dateModified: 1663431412
+email:
+  fromEmail: benjaminawilliamson@gmail.com
+  fromName: pairadice
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    361f16aa-ce68-40f3-9e47-8ebefb09c994: pairadice
+    5570d265-1c68-493e-9d8d-b625a29ddfed: pairadice
+    efd9e91f-0f6c-4839-8a1b-1db4ba59844b: Common
+system:
+  edition: solo
+  live: true
+  name: pairadice
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
