@@ -7,7 +7,8 @@ import '@/css/app.css';
 // App main
 const main = async () => {
     // Create our vue instance
-    const app = createApp(App);
+    const app = createApp({});
+    app.component('WooHoo', App)
     // Mount the app
     return app.mount('#app-container');
 };

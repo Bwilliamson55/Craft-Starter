@@ -1,7 +1,8 @@
 <template>
-  <confetti-party />
+  <p class="wag-text-blue mx-auto text-center">
+    wat
+  </p>
 </template>
 
 <script setup lang="ts">
-import ConfettiParty from '@/vue/ConfettiParty.vue';
 </script>

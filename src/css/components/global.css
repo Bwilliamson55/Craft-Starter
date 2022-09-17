@@ -7,3 +7,95 @@
 [v-cloak] {
   display: none;
 }
+
+/* Wag Primary Color classes */
+
+@layer components {
+  /* buttons */
+  .wag-btn {
+    @apply text-base rounded-md shadow-sm text-white border border-transparent;
+  }
+
+  .wag-blue {
+    @apply bg-cyan-600 hover:bg-cyan-700;
+  }
+
+  .wag-purple {
+    @apply bg-purple-700 hover:bg-purple-800;
+  }
+
+  .wag-green {
+    @apply bg-lime-600 hover:bg-lime-800;
+  }
+
+  .wag-orange {
+    @apply bg-orange-600 hover:bg-orange-800;
+  }
+
+  /* text */
+  .wag-text-blue {
+    @apply text-cyan-600 font-extrabold;
+  }
+
+  .wag-text-purple {
+    @apply text-purple-800 font-extrabold;
+  }
+
+  .wag-text-green {
+    @apply text-lime-700 font-extrabold;
+  }
+
+  .wag-text-orange {
+    @apply text-orange-700 font-extrabold;
+  }
+
+  .filter-gray {
+    filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(96%) contrast(97%);
+  }
+
+  .filter-gray-light {
+    filter: invert(99%) sepia(5%) saturate(67%) hue-rotate(350deg) brightness(116%) contrast(87%);
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  img .swiper-slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .htmx-indicator {
+    display: none;
+  }
+
+  .htmx-request.htmx-indicator {
+    display: block;
+  }
+
+  img .htmx-settling {
+    opacity: 0;
+  }
+
+  img {
+    transition: opacity 400ms ease-in;
+  }
+}
