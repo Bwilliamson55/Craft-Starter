@@ -29,7 +29,6 @@
 {% extends "_layouts/global-variables.twig" %}
 
 {%- block htmlPage -%}
-    {% minify %}
     <!DOCTYPE html>
         {% block htmlTag %}
             <html lang="{{ craft.app.language |slice(0,2) }}">
@@ -51,5 +50,4 @@
                 {% endblock bodyContent %}
             </body>
         </html>
-    {% endminify %}
 {%- endblock htmlPage -%}
