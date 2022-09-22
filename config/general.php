@@ -8,18 +8,37 @@
  * @see \craft\config\GeneralConfig
  */
 
-use craft\config\GeneralConfig;
 use craft\helpers\App;
 
-return GeneralConfig::create()
-    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
-    ->defaultWeekStartDay(1)
-    // Prevent generated URLs from including "index.php"
-    ->omitScriptNameInUrls()
-    // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-    ->devMode(App::env('DEV_MODE') ?? false)
-    // Allow administrative changes
-    ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
-    // Disallow robots
-    ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
-;
+return [
+    // Craft config settings from .env variables
+    'aliases' => [
+        '@assetsUrl' => App::env('ASSETS_URL'),
+        '@cloudfrontUrl' => App::env('CLOUDFRONT_URL'),
+        '@web' => App::env('SITE_URL'),
+        '@webroot' => App::env('WEB_ROOT_PATH'),
+    ],
+    'allowUpdates' => (bool)App::env('ALLOW_UPDATES'),
+    'allowAdminChanges' => (bool)App::env('ALLOW_ADMIN_CHANGES'),
+    'backupOnUpdate' => (bool)App::env('BACKUP_ON_UPDATE'),
+    'devMode' => (bool)App::env('DEV_MODE'),
+    'enableTemplateCaching' => (bool)App::env('ENABLE_TEMPLATE_CACHING'),
+    'resourceBasePath' => App::env('WEB_ROOT_PATH') . '/cpresources',
+    'runQueueAutomatically' => (bool)App::env('RUN_QUEUE_AUTOMATICALLY'),
+    'securityKey' => App::env('SECURITY_KEY'),
+    // Craft config settings from constants
+    'cacheDuration' => false,
+    'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true,
+    ],
+    'defaultTokenDuration' => 'P2W',
+    'enableCsrfProtection' => true,
+    'errorTemplatePrefix' => 'errors/',
+    'generateTransformsBeforePageLoad' => true,
+    'maxCachedCloudImageSize' => 3000,
+    'maxUploadFileSize' => '100M',
+    'omitScriptNameInUrls' => true,
+    'useEmailAsUsername' => true,
+    'usePathInfo' => true,
+];
