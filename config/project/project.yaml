@@ -1,4 +1,4 @@
-dateModified: 1663439635
+dateModified: 1664041418
 email:
   fromEmail: benjaminawilliamson@gmail.com
   fromName: pairadice
@@ -40,6 +40,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
   vite:
     edition: standard
     enabled: true
