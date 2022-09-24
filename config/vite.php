@@ -11,7 +11,6 @@
 use craft\helpers\App;
 
 return [
-
     'useDevServer' => App::env('DEV_MODE'),
     'manifestPath' => '@webroot/dist/manifest.json',
     'devServerPublic' => App::env('PRIMARY_SITE_URL') . ':3000',
