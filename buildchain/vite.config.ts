@@ -1,10 +1,8 @@
 import {defineConfig} from 'vite';
 import vue from '@vitejs/plugin-vue'
 import ViteRestart from 'vite-plugin-restart';
-import viteCompression from 'vite-plugin-compression';
 import {visualizer} from 'rollup-plugin-visualizer';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
-import critical from 'rollup-plugin-critical';
 
 import * as path from 'path';
 
@@ -25,14 +23,6 @@ export default defineConfig(({command}) => ({
     }
   },
   plugins: [
-    critical({
-      criticalUrl: 'http://pairadice.ddev.site',
-      criticalBase: '../web/dist/criticalcss/',
-      criticalPages: [
-        {uri: '/', template: 'index'},
-      ],
-      criticalConfig: {}
-    }),
     nodeResolve({
       moduleDirectories: [
         path.resolve('./node_modules'),
@@ -48,9 +38,6 @@ export default defineConfig(({command}) => ({
       ],
     }),
     vue(),
-    viteCompression({
-      filter: /\.(js|mjs|json|css|map)$/i
-    }),
     visualizer({
       filename: './src/stats.html',
       template: 'treemap',
@@ -66,11 +53,14 @@ export default defineConfig(({command}) => ({
     preserveSymlinks: true,
   },
   server: {
+    origin: 'http://localhost:3000',
+    watch: {
+      usePolling: true
+    },
     fs: {
       strict: false
     },
     host: '0.0.0.0',
-    origin: 'http://localhost:3000',
     port: 3000,
     strictPort: true,
   }

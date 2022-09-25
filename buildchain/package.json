@@ -2,11 +2,16 @@
   "name": "buildchain",
   "description": "A drop-in buildchain for using Vite in your Craft CMS plugins or modules",
   "author": {
-    "email": "info@nystudio107.com",
-    "name": "nystudio107",
-    "url": "https://nystudio107.com"
+    "email": "findme@github",
+    "name": "bwilliamson55",
+    "url": "github.com/bwilliamson55"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.2",
+    "@heroicons/vue": "^2.0.11",
+    "@tailwindcss/typography": "^0.5.7",
+    "daisyui": "^2.31.0",
+    "theme-change": "^2.2.0",
     "vue": "^3.2.0"
   },
   "devDependencies": {
@@ -20,20 +25,19 @@
     "eslint": "^8.0.0",
     "eslint-plugin-vue": "^8.0.0",
     "postcss": "^8.4.0",
-    "rollup-plugin-critical": "^1.0.4",
     "rollup-plugin-visualizer": "^5.0.0",
     "stylelint": "^14.0.0",
     "stylelint-config-recommended": "^6.0.0",
-    "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-config-recommended-vue": "^1.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "tailwindcss": "^3.0.0",
-    "vue-eslint-parser": "^8.0.0",
     "vite": "^3.1.0",
-    "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-manifest-sri": "^0.1.0",
     "vite-plugin-compression": "^0.5.0",
+    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-favicon2": "^1.1.4",
-    "vite-plugin-restart": "0.2.0"
+    "vite-plugin-manifest-sri": "^0.1.0",
+    "vite-plugin-restart": "0.2.0",
+    "vue-eslint-parser": "^8.0.0"
   },
   "scripts": {
     "dev": "vite",

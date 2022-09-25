@@ -1,6 +1,6 @@
 <template>
   <p class="wag-text-blue mx-auto text-center">
-    wat
+    watt
   </p>
 </template>
 

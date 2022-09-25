@@ -12,6 +12,7 @@
  * You can see the styles here:
  * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
+@import "tailwindcss/base";
 
 /**
  * We don't want these in the Control Panel
@@ -45,7 +46,8 @@
  * Include styles for individual pages
  *
  */
-@import "pages/welcome.css";
+
+/* @import "pages/welcome.css"; */
 
 /**
  * Include vendor css.

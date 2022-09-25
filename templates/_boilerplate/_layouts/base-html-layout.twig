@@ -33,7 +33,7 @@
 %}
 
 {% block htmlTag %}
-    <html class="fonts-loaded" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <html class="fonts-loaded" data-theme="dark" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 {% endblock htmlTag %}
 
 {# -- Page content that should be included in the <head> -- #}
@@ -60,7 +60,7 @@
         {% block headCss %}
         {% endblock headCss %}
     </style>
-    {% include "_boilerplate/_partials/critical-css.twig" %}
+    {{ craft.vite.script("src/js/app.ts", true) }}
 
 {% endblock headContent %}
 
